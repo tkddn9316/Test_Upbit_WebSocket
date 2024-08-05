@@ -9,7 +9,7 @@ import javax.inject.Inject
 class MarketDataSourceImpl @Inject constructor(private val apiInterface: ApiInterface) :
     MarketDataSource {
 
-    override fun getMarket(): Flow<MarketDTO> {
+    override fun getMarket(): Flow<List<MarketDTO>> {
         return flow {
             emit(apiInterface.getMarket())
         }

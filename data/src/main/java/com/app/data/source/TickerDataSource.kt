@@ -7,5 +7,5 @@ import kotlinx.coroutines.flow.Flow
 interface TickerDataSource {
     fun getTicker(
         markets: List<String>
-    ): Flow<TickerDTO>
+    ): Flow<List<TickerDTO>>
 }

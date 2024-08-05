@@ -8,7 +8,7 @@ import kotlinx.coroutines.flow.flow
 import javax.inject.Inject
 
 class TickerDataSourceImpl @Inject constructor(private val apiInterface: ApiInterface): TickerDataSource {
-    override fun getTicker(markets: List<String>): Flow<TickerDTO> {
+    override fun getTicker(markets: List<String>): Flow<List<TickerDTO>> {
         return flow {
             emit(
                 apiInterface.getTickers(markets)

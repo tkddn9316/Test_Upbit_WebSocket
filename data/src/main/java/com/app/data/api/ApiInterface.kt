@@ -10,10 +10,10 @@ import retrofit2.http.Query
  */
 interface ApiInterface {
     @GET("v1/market/all")
-    fun getMarket(): MarketDTO
+    suspend fun getMarket(): List<MarketDTO>
 
     @GET("v1/ticker")
-    fun getTickers(
+    suspend fun getTickers(
         @Query("markets") markets: List<String>
-    ): TickerDTO
+    ): List<TickerDTO>
 }

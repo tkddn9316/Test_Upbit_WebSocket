@@ -18,7 +18,7 @@ import javax.inject.Singleton
 class RepositoryModule {
     @Provides
     @Singleton
-    fun provideMarketRepository(
+    fun provideTickerRepository(
         marketDataSource: MarketDataSource,
         tickerDataSource: TickerDataSource
     ): TickerRepository {
