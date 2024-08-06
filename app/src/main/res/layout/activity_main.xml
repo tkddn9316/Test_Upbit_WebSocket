@@ -42,24 +42,87 @@
                         android:textColor="@color/black_700"
                         android:textSize="14dp" />
 
-                    <androidx.appcompat.widget.AppCompatTextView
+                    <LinearLayout
+                        android:id="@+id/sort_price_"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginEnd="3dp"
                         android:layout_weight="1"
                         android:gravity="end"
-                        android:text="@string/trade_price"
-                        android:textColor="@color/black_700"
-                        android:textSize="14dp" />
+                        android:orientation="horizontal"
+                        android:background="?attr/selectableItemBackgroundBorderless">
 
-                    <androidx.appcompat.widget.AppCompatTextView
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginEnd="3dp"
+                            android:text="@string/trade_price"
+                            android:textColor="@color/black_700"
+                            android:textSize="14dp" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="4dp"
+                            android:orientation="vertical">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:tint="@{viewModel.sortByPrice == 2 ? @color/black_700 : @color/black_400}"
+                                app:srcCompat="@drawable/ic_triangle" />
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:tint="@{viewModel.sortByPrice == 1 ? @color/black_700 : @color/black_400}"
+                                app:srcCompat="@drawable/ic_triangle_down" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/sort_acc_"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="end"
-                        android:text="@string/acc_trade_price_24h"
-                        android:textColor="@color/black_700"
-                        android:textSize="14dp" />
+                        android:orientation="horizontal"
+                        android:background="?attr/selectableItemBackgroundBorderless">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginEnd="3dp"
+                            android:text="@string/acc_trade_price_24h"
+                            android:textColor="@color/black_700"
+                            android:textSize="14dp" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="4dp"
+                            android:orientation="vertical">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:tint="@{viewModel.sortByAcc == 2 ? @color/black_700 : @color/black_400}"
+                                app:srcCompat="@drawable/ic_triangle" />
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:tint="@{viewModel.sortByAcc == 1 ? @color/black_700 : @color/black_400}"
+                                app:srcCompat="@drawable/ic_triangle_down" />
+
+                        </LinearLayout>
+                    </LinearLayout>
                 </LinearLayout>
 
                 <View
@@ -74,7 +137,7 @@
                     android:layout_weight="1"
                     app:items="@{viewModel.placesListResult}"
                     app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                    app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+                    app:layout_behavior="@string/appbar_scrolling_view_behavior" />
             </LinearLayout>
         </LinearLayout>
     </FrameLayout>

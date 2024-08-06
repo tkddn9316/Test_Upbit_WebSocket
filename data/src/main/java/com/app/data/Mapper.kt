@@ -7,7 +7,7 @@ fun mapperToTicker(tickerDTO: List<TickerDTO>): List<Ticker> =
     tickerDTO.toList().map {
         Ticker(
             it.market,
-            "",
+            it.market,
             it.opening_price,
             it.high_price,
             it.low_price,
