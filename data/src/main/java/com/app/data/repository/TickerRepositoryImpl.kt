@@ -62,7 +62,7 @@ class TickerRepositoryImpl @Inject constructor(
                     tickerDataSource.getTicker(it)
                 }
                 .collect {
-                    mapperToTicker(it)
+                    emit(mapperToTicker(it))
                 }
         }
     }

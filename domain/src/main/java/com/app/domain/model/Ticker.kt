@@ -1,5 +1,9 @@
 package com.app.domain.model
 
+import android.content.Context
+import android.graphics.Color
+import com.app.domain.R
+
 data class Ticker(
     val market: String,
     var code: String = "",   // market = code
@@ -19,4 +23,24 @@ data class Ticker(
     var ask_bid: String = "",
     // 24시간 누적 거래대금
     val acc_trade_price_24h: Double
-)
+) {
+
+    // 거래대금 text
+    fun setAcc(): String {
+        return acc_trade_price_24h.toString()
+    }
+
+    // 현재가 text
+    fun setPrice(): String {
+        return trade_price.toString()
+    }
+
+    // 색 지정
+//    fun setColor(): Int {
+//        return when(change) {
+//            FConstrant.PriceColor.RISE.name -> Color.BLACK
+//            FConstrant.PriceColor.FALL.name -> context.getColor(R.color.blue_500)
+//            else -> context.getColor(R.color.black_700)
+//        }
+//    }
+}
