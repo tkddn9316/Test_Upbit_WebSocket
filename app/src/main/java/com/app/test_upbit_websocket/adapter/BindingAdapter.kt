@@ -1,12 +1,12 @@
-package com.app.test_upbit_websocket.base
+package com.app.test_upbit_websocket.adapter
 
 import android.view.View
-import androidx.recyclerview.widget.ListAdapter
-import androidx.recyclerview.widget.RecyclerView
 import androidx.databinding.BindingAdapter
+import androidx.recyclerview.widget.RecyclerView
 import com.app.domain.model.Ticker
 import com.app.test_upbit_websocket.R
-import com.app.test_upbit_websocket.Util
+import com.app.test_upbit_websocket.base.BaseListAdapter
+import com.app.test_upbit_websocket.util.Util
 
 object BindingAdapter {
 

@@ -1,4 +1,4 @@
-package com.app.test_upbit_websocket
+package com.app.test_upbit_websocket.view
 
 import android.util.Log
 import androidx.lifecycle.LiveData
@@ -8,7 +8,8 @@ import com.app.domain.usecase.GetTickerUseCase
 import com.app.domain.usecase.SendWebSocketUseCase
 import com.app.domain.usecase.StartWebSocketUseCase
 import com.app.domain.usecase.StopWebSocketUseCase
-import com.app.test_upbit_websocket.Util.SortOption
+import com.app.test_upbit_websocket.R
+import com.app.test_upbit_websocket.util.Util.SortOption
 import com.app.test_upbit_websocket.base.BaseViewModel
 import com.google.gson.Gson
 import dagger.hilt.android.lifecycle.HiltViewModel

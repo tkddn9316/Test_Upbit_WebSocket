@@ -6,11 +6,11 @@
 
         <variable
             name="view"
-            type="com.app.test_upbit_websocket.MainActivity" />
+            type="com.app.test_upbit_websocket.view.MainActivity" />
 
         <variable
             name="viewModel"
-            type="com.app.test_upbit_websocket.MainViewModel" />
+            type="com.app.test_upbit_websocket.view.MainViewModel" />
     </data>
 
     <FrameLayout

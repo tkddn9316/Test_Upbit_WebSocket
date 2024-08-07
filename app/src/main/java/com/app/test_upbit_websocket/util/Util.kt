@@ -1,4 +1,4 @@
-package com.app.test_upbit_websocket
+package com.app.test_upbit_websocket.util
 
 object Util {
 

@@ -34,7 +34,7 @@ class TickerRepositoryImpl @Inject constructor(
                     if (it.size >= 20) it.subList(0, 20) else it
                 }
                 .flatMapConcat { marketList ->
-                    // 주어진 Market Code를 이용하여 최초 현재가 구하기
+                    // 주어진 Market Code를 이용하여 최초 ticker 구하기
                     tickerDataSource.getTicker(marketList)
                 }
                 .collect { emit(mapperToTicker(it)) }

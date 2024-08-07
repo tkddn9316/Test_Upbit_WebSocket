@@ -1,13 +1,14 @@
-package com.app.test_upbit_websocket
+package com.app.test_upbit_websocket.view
 
 import android.os.Bundle
 import android.view.View
 import androidx.activity.viewModels
-import androidx.recyclerview.widget.LinearLayoutManager
+import com.app.test_upbit_websocket.R
 import com.app.test_upbit_websocket.base.BaseActivity
 import com.app.test_upbit_websocket.databinding.ActivityMainBinding
 import dagger.hilt.android.AndroidEntryPoint
-import com.app.test_upbit_websocket.Util.SortOption
+import com.app.test_upbit_websocket.util.Util.SortOption
+import com.app.test_upbit_websocket.adapter.KrwMarketListAdapter
 
 @AndroidEntryPoint
 class MainActivity : BaseActivity<ActivityMainBinding, MainViewModel>() {
