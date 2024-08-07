@@ -49,7 +49,8 @@
                         android:layout_weight="1"
                         android:gravity="end"
                         android:orientation="horizontal"
-                        android:background="?attr/selectableItemBackgroundBorderless">
+                        android:background="?attr/selectableItemBackground"
+                        android:onClick="@{view::onClick}">
 
                         <androidx.appcompat.widget.AppCompatTextView
                             android:layout_width="wrap_content"
@@ -90,7 +91,8 @@
                         android:layout_weight="1"
                         android:gravity="end"
                         android:orientation="horizontal"
-                        android:background="?attr/selectableItemBackgroundBorderless">
+                        android:background="?attr/selectableItemBackground"
+                        android:onClick="@{view::onClick}">
 
                         <androidx.appcompat.widget.AppCompatTextView
                             android:layout_width="wrap_content"
@@ -135,7 +137,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
-                    app:items="@{viewModel.placesListResult}"
+                    app:items="@{viewModel.tickerListResult}"
                     app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                     app:layout_behavior="@string/appbar_scrolling_view_behavior" />
             </LinearLayout>

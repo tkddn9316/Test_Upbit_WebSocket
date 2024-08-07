@@ -2,13 +2,14 @@ package com.app.test_upbit_websocket.base
 
 import android.content.Context
 import android.os.Bundle
+import android.view.View
 import androidx.annotation.LayoutRes
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import com.app.test_upbit_websocket.BR
 
-abstract class BaseActivity<VDB : ViewDataBinding, VM : BaseViewModel> : AppCompatActivity() {
+abstract class BaseActivity<VDB : ViewDataBinding, VM : BaseViewModel> : AppCompatActivity(), View.OnClickListener {
     abstract val viewModel: VM
     protected lateinit var binding: VDB
     protected lateinit var context: Context
@@ -30,5 +31,9 @@ abstract class BaseActivity<VDB : ViewDataBinding, VM : BaseViewModel> : AppComp
             setVariable(BR.view, this@BaseActivity)
             lifecycleOwner = this@BaseActivity
         }
+    }
+
+    override fun onClick(v: View?) {
+
     }
 }

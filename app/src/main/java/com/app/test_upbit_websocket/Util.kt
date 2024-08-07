@@ -10,7 +10,7 @@ object Util {
         BUY("BID"), SELL("ASK")
     }
 
-    enum class SortOption {
-        Ascending, Nothing, Descending
+    enum class SortOption(val value: Int) {
+        Nothing(0), Descending(1), Ascending(2)
     }
 }

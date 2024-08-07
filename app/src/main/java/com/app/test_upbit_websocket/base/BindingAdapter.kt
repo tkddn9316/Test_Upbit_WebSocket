@@ -14,7 +14,10 @@ object BindingAdapter {
     @BindingAdapter("items")
     fun bindRecyclerView(view: RecyclerView, item: List<Any>?) {
         view.adapter?.let {
-            (it as BaseListAdapter<*, *>).submitList(item as List<Nothing>)
+            (it as BaseListAdapter<*, *>).submitList(item as List<Nothing>) {
+                // 기존 스크롤 유지하기
+                view.layoutManager?.onRestoreInstanceState(view.layoutManager?.onSaveInstanceState())
+            }
         }
     }
 

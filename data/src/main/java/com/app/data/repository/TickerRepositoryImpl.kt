@@ -31,7 +31,7 @@ class TickerRepositoryImpl @Inject constructor(
                 }
                 .map {
                     // 20개
-                    if (it.size >= 20) it.subList(0, 19) else it
+                    if (it.size >= 20) it.subList(0, 20) else it
                 }
                 .flatMapConcat { marketList ->
                     // 주어진 Market Code를 이용하여 최초 현재가 구하기
